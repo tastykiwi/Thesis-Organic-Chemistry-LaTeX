@@ -1,0 +1,139 @@
+\chapter{Experimental templates and examples}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% This is the NMR template for recurring things:
+
+\section{NMR}
+
+
+NH2 - (\textit{s}, 2H, N\underline{\textbf{H}}$_2$)
+
+NH - (\textit{s}, 1H, N\underline{\textbf{H}})
+
+CH3 - H - (\textit{s}, 3H, C\underline{\textbf{H}}$_3$)
+      C - (\underline{\textbf{C}}H$_3$)
+
+Si(CH3)3 - C - (Si(\underline{\textbf{C}}H$_3$)$_3$)
+
+C(CH3)3 (tert-carbon underlined) - C - (\underline{\textbf{C}}(CH$_3$)$_3$)
+
+C(CH3)3 (methyl underlined) - C - (C(\underline{\textbf{C}}H$_3$)$_3$)
+
+C~CH - H - (\textit{s}, 1H, $\equiv$C\underline{\textbf{H}})
+       C - ($\equiv$\textbf{\underline{C}}H)
+       
+C-C~C - C - (C--\underline{\textbf{C}}$\equiv$C)
+
+N-C=O - C - (N--\underline{\textbf{C}}=O)
+
+aromatic C - (C-arom.)
+
+CH2	-	H	-	C\underline{\textbf{H}}$_2$
+		C	-	\underline{\textbf{C}}H$_2$
+
+%%%%%%%%%This is the template for adding compounds to the experimental
+
+\section{experimental entrty}
+
+\subsubsection{Phenol (\compound{phenol})} %%%%Name of compound: 
+% write text in the section below before the %
+
+%
+	%\indent       %uncomment this when there is no previous text in this subsubsection, this will allign yield with the sections below
+	\begin{wrapfigure}{r}{0.3\textwidth}
+		\vspace{-20pt}
+  			\begin{center}
+   				 \chemfig{*6(-=-(-OH)=-=)} % for labeling hydrogen atoms with numbers use ([,,,,draw=none]-#)
+  			\end{center}
+  		\vspace{-35pt}
+	\end{wrapfigure}
+
+	\textbf{Yield:} 
+
+	\textbf{MP:}
+
+	\textbf{IR (cm$^{-1}$):} $\bar{\nu}$ 
+
+	\textbf{$^1$H NMR (300MHz, CDCl$_3$):} $\delta$ 
+
+	\textbf{$^{13}$C NMR (75MHz, CDCl$_3$):} $\delta$ 
+
+	\textbf{HRMS:}
+
+\subsubsection{ (\compound{})} %%%%Name of compound: 
+% write text in the section below before the %
+
+%
+	%\indent       %uncomment this when there is no previous text in this subsubsection, this will allign yield with the sections below
+	\begin{wrapfigure}{r}{0.3\textwidth}
+		\vspace{-20pt}
+  			\begin{center}
+   				 \chemfig{} % for labeling hydrogen atoms with numbers use ([,,,,draw=none]-#)
+  			\end{center}
+  		\vspace{-35pt}
+	\end{wrapfigure}
+
+	\textbf{Yield:} 
+
+	\textbf{MP:}
+
+	\textbf{IR (cm$^{-1}$):} $\bar{\nu}$ 
+
+	\textbf{$^1$H NMR (300MHz, CDCl$_3$):} $\delta$ 
+
+	\textbf{$^{13}$C NMR (75MHz, CDCl$_3$):} $\delta$ 
+
+	\textbf{HRMS:}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% This section is for adding crystolagriphical 
+\section{crystal tables}
+
+
+\begin{table}
+\caption{Crystal data of \compound{}}
+\begin{tabular}{ll}      % Alignment for each cell: l=left, c=center, r=right
+Empirical formula 	&\chemfig{C_{11}H_{14}N_{2}Si_1}\\
+Formula weight 	&\\
+Temperature 	& K\\
+Wavelength 	& \AA\\
+Crystal system 	&\\
+Space group 	&C \\
+Unit cell dimensions&\\
+	a =   \AA &	$\alpha$ = $^\circ$\\
+	b =  \AA &	$\beta$ = $^\circ$\\
+	c =  \AA	&$\gamma$ = $^\circ$\\
+Volume	& \AA \chemfig{^3}\\
+Z	&\\
+Density (calculated)	&  Mg/m\chemfig{^3}\\
+Absorption coefficient	&  mm\chemfig{^{-1}}\\
+F(000)	&\\
+Crystal size	& mm\chemfig{^3}\\
+\end{tabular}
+\end{table}
+\begin{table}
+\caption{Data collection of \compound{}}
+\begin{tabular}{ll}      % Alignment for each cell: l=left, c=center, r=right
+$\theta$ range for data collection	&$^\circ$ to $^\circ$\\
+Index ranges	&$-\preceq h\preceq $, $-\preceq k\preceq $, $-\preceq l\preceq $\\
+Reflections collected	&\\
+Independent reflections	& $[R(int)$ = $]$\\
+Completeness to $\theta$ = $^\circ$&	 \%\\ 
+\end{tabular}
+\end{table}
+\begin{table}
+\caption{Refinement of \compound{}}
+\begin{tabular}{ll}      % Alignment for each cell: l=left, c=center, r=right
+Refinement method	&Full-matrix least-squares on F\chemfig{^2}\\
+Data / restraints / parameters	& /  / \\
+Goodness-of-fit on F\chemfig{^2}	&\\
+Final R indices $[I>2\sigma(I)]$	&R1 = , wR2 = \\
+R indices (all data)	&R1 = , wR2 = \\
+Largest diff. peak and hole	& and - e.\AA\chemfig{^{-3}}\\
+\end{tabular}
+\end{table}
+
+
+\section{chemfig}
+
+
+Boc        ([:30]-([2]=O)([:330]-O([:30]-([2]-)([:30]-)([:330]-)

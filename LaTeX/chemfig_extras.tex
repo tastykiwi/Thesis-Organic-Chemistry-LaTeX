@@ -1,0 +1,17 @@
+\makeatletter
+\definearrow{3}{s>}{%
+\ifx\@empty#1\@empty
+\expandafter\draw\expandafter[\CF@arrow@current@style,-CF@full](\CF@arrow@start@node)--(\CF@arrow@end@node)node[midway](yarrow@arctangent);%
+\else
+\def\curvedarrow@style{shorten <=\CF@arrow@offset,shorten >=\CF@arrow@offset,}%
+\CF@expadd@tocs\curvedarrow@style\CF@arrow@current@style
+\expandafter\draw\expandafter[\curvedarrow@style,-CF@full](\CF@arrow@start@name)..controls#1..(\CF@arrow@end@name);
+\fi
+\CF@arrow@display@label{#2}{0.5}{+}{\CF@arrow@start@node}{#3}{0.5}{-}{\CF@arrow@end@node}
+}
+
+\makeatother
+
+\def\leftparen{\llap{$\left(\strut\right.$\kern-4pt }}
+\def\rightparen{\rlap{$\kern-4pt \left.\strut\right)$}}
+

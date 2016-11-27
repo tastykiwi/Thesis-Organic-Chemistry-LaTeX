@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This template has been edited so as to be used with chemistry thesis dissertations 
+% in the university of the Witwaters Rand by Hendrik Henning (2013-2016)
+%
+% Thesis 
+% LaTeX Template
+% Version 1.3 (21/12/12)
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original authors:
+% Steven Gunn 
+% http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/
+% and
+% Sunil Patel
+% http://www.sunilpatel.co.uk/thesis-template/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Note:
+% Make sure to edit document variables in the Thesis.cls file
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, a4paper, oneside]{Thesis} % Paper size, default font size and one-sided paper
+
+\usepackage[super, sort&compress,comma]{natbib}
+\usepackage{fontspec}
+\usepackage[]{chemmacros}
+\usepackage[]{pdfpages}
+\usepackage{odsfile}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{lscape}
+\usetikzlibrary{arrows}
+\usepackage{modiagram}
+\usepackage{mol2chemfig}
+\renewcommand*{\schemename}{Scheme}
+\hypersetup{
+    bookmarks=true,         	 % show bookmarks bar?
+    unicode=false,          	 % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        	 % show Acrobat’s toolbar?
+    pdfmenubar=true,       		 % show Acrobat’s menu?
+    pdffitwindow=false,     	 % window fit to page when opened
+    pdfstartview={FitV},   		 % fits the width of the page to the window
+    pdfcreator={LaTex},		   	 % creator of the document
+    pdfproducer={Producer}, 	 % producer of the document
+    pdfnewwindow=true,      	 % links in new window
+    colorlinks=true,       		 % false: boxed links; true: colored links
+    linkcolor=black,          	 % color of internal links (change box color with linkbordercolor)
+    citecolor=black,        	 % color of links to bibliography
+    filecolor=black,      		 % color of file links
+    urlcolor=black           	 % color of external links
+}
+\title{\ttitle} % Defines the thesis title - don't touch this
+\setcounter{tocdepth}{2}
+
+\begin{document}
+
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\setstretch{1.3} % Line spacing of 1.3
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{} % Clears all page headers and footers
+\rhead{\thepage} % Sets the right side header to show the page number
+\lhead{} % Clears the left side page header
+
+\pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+% PDF meta-data
+\hypersetup{pdftitle={\ttitle}}
+\hypersetup{pdfsubject=\subjectname}
+\hypersetup{pdfauthor=\authornames}
+\hypersetup{pdfkeywords=\keywordnames}
+
+\input{./frontmatter}
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+\pagestyle{fancy} % Return the page headers back to the "fancy" style
+\setstretch{1.5} %Spacing is now 1.5
+\setcounter{secnumdepth}{2}
+\input{chemfig_extras}
+
+\input{Chapters/Example}
+
+% Include the chapters of the thesis as separate files from the Chapters folder
+
+\input{Chapters/chapter1}  %Your work goes in here
+
+\input{Chapters/chapter2}  %Your work goes in here
+
+% Add somemore chapters here
+
+\input{Chapters/Experimental_template}  %Use this document as a reference to generate a good looking experimental section
+
+\backmatter
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\label{Bibliography}
+\lhead{\emph{References}} % Change the page header to say "Bibliography"
+
+\bibliographystyle{achemso} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+
+\bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+% Uncomment the lines as you write the Appendices
+
+\input{./Appendices/AppendixA}
+%\input{./Appendices/AppendixB}
+%\input{./Appendices/AppendixC}
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\end{document}
+

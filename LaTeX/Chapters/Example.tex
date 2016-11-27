@@ -1,0 +1,20 @@
+\chapter{Example}
+
+\section{Sectional example}
+
+Now I will reference ~\ref{scheme:formyl_benzyl1} in text.
+
+
+\begin{scheme}[ht]
+\schemestart[][west]
+\Chembelow{\chemfig{*6(-=(*5(-N(-H)-(-(*6(-(-)=-=-=)))=-))-=-=)}}{\compound{indole1}}
+\arrow{->[BnBr][KOH]}[,]
+\Chembelow{\chemfig{*6(-=(*5(-N(-Bn)-(-(*6(-(-)=-=-=)))=-))-=-=)}}{\compound{indole_bezyl}}
+\arrow{->[POCl$_3$][NaOH]}[,]
+\Chembelow{\chemfig{*6(-=(*5(-N(-Bn)-(-(*6(-(-)=-=-=)))=(-CHO)-))-=-=)}}{\compound{indole_benzyl_formyl}}
+\schemestop
+\caption{The synthesis of \compound{indole_benzyl_formyl} from the indole by formylation and benzyl protection.}
+\label{scheme:formyl_benzyl1}
+\end{scheme}
+
+\ce{CH3(C=O)CH3} or \ce{MgSO4}
