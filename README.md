@@ -6,7 +6,7 @@ This is the template I modified for my PhD thesis. It does everything natively i
 
 - Use LuaLaTeX to generate the pdf output.
 
-- Checkout the [LaTeX/Chapters/Example.tex][Example] to see how to add schemes, drawings and reference in text.
+- Checkout the LaTeX/Chapters/Example.tex to see how to add schemes, drawings and reference in text.
 
 - Change variables in the Thesis.cls file and comment out the example files.
 
